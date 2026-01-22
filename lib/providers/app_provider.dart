@@ -10,12 +10,12 @@ class AppProvider extends ChangeNotifier {
   List<Product> _filteredProducts = [];
   Map<int, int> _cart = {};
   bool _isDarkMode = false;
-  bool _ascending = false;
+  bool? _ascending;
 
   List<Product> get products => _filteredProducts;
   Map<int, int> get cart => _cart;
   bool get isDarkMode => _isDarkMode;
-  bool get ascending => _ascending;
+  bool? get ascending => _ascending;
 
   AppProvider() {
     _loadCart();

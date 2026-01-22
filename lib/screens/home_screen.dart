@@ -69,17 +69,21 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     const Text("Sort by Price: "),
                     ActionChip(
-                      backgroundColor: provider.ascending
-                          ? Colors.amber
-                          : Colors.grey,
+                      backgroundColor: provider.ascending == null
+                          ? Colors.grey
+                          : (provider.ascending!
+                                ? Colors.amber
+                                : Colors.grey),
                       label: const Text("Low to High"),
                       onPressed: () => provider.sortProducts(true),
                     ),
                     const SizedBox(width: 8),
                     ActionChip(
-                      backgroundColor: provider.ascending
+                      backgroundColor: provider.ascending == null
                           ? Colors.grey
-                          : Colors.amber,
+                          : (provider.ascending!
+                                ? Colors.grey
+                                : Colors.amber),
 
                       label: const Text("High to Low"),
                       onPressed: () => provider.sortProducts(false),
