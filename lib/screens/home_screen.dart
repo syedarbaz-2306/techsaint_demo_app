@@ -15,8 +15,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: const Text('ShopSmart'),
+        title: const Text('Demo'),
         actions: [
           IconButton(
             icon: Icon(
@@ -163,7 +162,6 @@ class _ProductCard extends StatelessWidget {
                 Text(
                   "\$${product.price}",
                   style: TextStyle(
-                    color: Theme.of(context).primaryColor,
                     fontSize: 16,
                   ),
                 ),
